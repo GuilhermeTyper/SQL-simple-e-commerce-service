@@ -5,3 +5,7 @@ restart o prompt e pronto.
 
 2 - login " mysql -u root -p ".
 
+3- "%" pode ser usado de qualquer host, já o "localhost" o acesso é limitado ao
+local.
+ 
+
