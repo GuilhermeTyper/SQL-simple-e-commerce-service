@@ -8,4 +8,6 @@ restart o prompt e pronto.
 3- "%" pode ser usado de qualquer host, já o "localhost" o acesso é limitado ao
 local.
  
-
+4 - Usando as versães antigas no ex:5.2.X, erros irá ser encontrados ao ser di-
+gitado as chamadas ou qualquer função em mínusculo, sendo que nas versões 5.7
+.X, digitando as mesmas em maiusculos erros não foram emitidos.
