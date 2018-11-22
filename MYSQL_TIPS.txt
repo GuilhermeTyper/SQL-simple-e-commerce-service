@@ -1,0 +1,7 @@
+1 - Após a instlação do mysql server, deve ser criada uma variavel de ambiente
+que deve ser instalada dentro do "path" global, e não no local exemplo no dire-
+tório seguinte " C:\Program Files\MySQL\MySQL Server 5.7\bin ".
+restart o prompt e pronto.
+
+2 - login " mysql -u root -p ".
+
