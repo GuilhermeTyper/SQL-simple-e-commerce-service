@@ -11,3 +11,49 @@ local.
 4 - Usando as versães antigas no ex:5.2.X, erros irá ser encontrados ao ser di-
 gitado as chamadas ou qualquer função em mínusculo, sendo que nas versões 5.7
 .X, digitando as mesmas em maiusculos erros não foram emitidos.
+
+5 - { - FOREIGN KEYS - }
+
+1. (DECLARAÇÃO JUNTO COM O CREATE TABLE) 
+
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID));
+
+NOTA: persons é uma tabela já criada, personsID é um campo dessa tabela.
+REFERENCES é de onde eu irei pegar os dados,igual um pai ensinado o que já
+aprendeu para um filho,na prática seria passar os dados para a outra tabela.
+--------------------------------------------------------------------------------
+2. (DECLARAÇÃO COM O CREATE TABLE PARA MULTIPLAS TABELAS)
+
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    CONSTRAINT FK_Person_Order FOREIGN KEY (PersonID)
+    REFERENCES Persons(PersonID));
+
+NOTA: CONSTRAINT(RESTRIÇÃO) com as contraint eu posso deixa o ban-
+de dados mais integrado, FK_Person_Order seria as tabelas que vai ser conec-
+tadas, separadas por underlines.
+---------------------------------------------------------------------------------
+3. (DECLARAÇÃO COM O ALTER TABLE)
+
+ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+---------------------------------------------------------------------------------
+4. (DECLARAÇÃO COM O ALTER TABLE PARA MULTIPLAS TABELAS)
+
+ALTER TABLE Orders ADD CONSTRAINT FK_Persons_Orders
+     FOREIGN KEY(PersonID) REFERENCES Persons(PersonID));
+---------------------------------------------------------------------------------
+5. (APAGANDO UM CHAVE ESTRANGEIRA COM CONSTRAINT)
+
+ALTER TABLE Orders
+    DROP FOREIGN KEY FK_Persons_Order;
+--------------------------------------------------------------------------------- 
+6 - 
