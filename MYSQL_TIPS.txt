@@ -56,4 +56,10 @@ ALTER TABLE Orders ADD CONSTRAINT FK_Persons_Orders
 ALTER TABLE Orders
     DROP FOREIGN KEY FK_Persons_Order;
 --------------------------------------------------------------------------------- 
-6 - 
+6 - MODIFY VS ADD
+
+1. MODIFY: como o proprio nome diz ele modifica um campo já criado.
+
+2. ADD: assim como o modify essa funcionalidade ela só adiciona ou cria algo
+--------------------------------------------------------------------------------
+7 - 
