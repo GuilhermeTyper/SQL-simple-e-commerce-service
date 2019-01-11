@@ -39,7 +39,8 @@ CREATE TABLE Orders (
 
 NOTA: CONSTRAINT(RESTRIÇÃO) com as contraint eu posso deixa o ban-
 de dados mais integrado, FK_Person_Order seria as tabelas que vai ser conec-
-tadas, separadas por underlines.
+tadas, separadas por underlines,em sumo eu quero dizer que deve ter um relac-
+onamento de dados entre ambas tabelas.
 ---------------------------------------------------------------------------------
 3. (DECLARAÇÃO COM O ALTER TABLE)
 
@@ -56,10 +57,26 @@ ALTER TABLE Orders ADD CONSTRAINT FK_Persons_Orders
 ALTER TABLE Orders
     DROP FOREIGN KEY FK_Persons_Order;
 --------------------------------------------------------------------------------- 
-6 - MODIFY VS ADD
+6 - MODIFY(MODIFICAR) VS ADD(ADICIONAR)
 
 1. MODIFY: como o proprio nome diz ele modifica um campo já criado.
 
 2. ADD: assim como o modify essa funcionalidade ela só adiciona ou cria algo
 --------------------------------------------------------------------------------
-7 - 
+7 - INSERT INTO(INSIRA DENTRO DE) 
+
+1. INSERT INTO VALUE()
+	essa funcionalidade você colocar dados manualmente no banco atr-
+	aves do values onde você insere dentro do mesmo os valores.
+EXEMPLOS: insert into comclien
+	values (1,
+	'0001',
+	'AARONSON',
+	'AARONSON FURNITURE LTDA',
+	'2015-02-17',
+	'17.807.928/0001-85,
+	'(21) 8167-6584',
+	'QUEIMADOS',
+	'RJ');
+--------------------------------------------------------------------------------
+8 - 
