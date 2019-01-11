@@ -1,4 +1,4 @@
-# SQL-simple-e-commerce-service
+# SQL--E-Commerce-Service
 
 _A simple e-commerce service in mysql database_ :mailbox:
 
